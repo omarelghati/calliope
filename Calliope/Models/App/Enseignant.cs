@@ -9,7 +9,7 @@ namespace Calliope.Models.App
     {
         public virtual ICollection<EvalutiationIndiv> EvaluationIndivs { get; set; }
         public virtual ICollection<Groupe> Groupes { get; set; }
-
+        public virtual ICollection<Discipline> Disciplines { get; set; }
         public Enseignant()
         {
             type = "Enseignant";

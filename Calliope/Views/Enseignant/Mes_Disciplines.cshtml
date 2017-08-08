@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Mes Disciplines";
+    Layout = "~/Views/Enseignant/_Layout.cshtml";
+}
+<style>
+    #add-discipline {
+        visibility:hidden;
+    }
+    #add-discipline .form-group {
+        margin-left:60px;   
+    }
+</style>
+<script>
+    var clicked;
+</script>
+<h1> Gestion des disciplines </h1>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-money fa-fw"></i> Liste des disciplines que vous enseingez</h3>
+        </div>
+        <div class="panel-body">
+            <div class="table-responsive">
+                <table class="table table-bordered table-hover table-striped">
+                    <thead>
+                        <tr>
+                            <th>Discipline #</th>
+                            <th>Nom de la discipline</th>
+                            @*<th>Order Time</th>
+                            <th>Amount (USD)</th>*@
+                        </tr>
+                    </thead>
+                    <tbody>
+                       @{
+                        foreach (var discipline in Model)
+                        {
+                            <tr>
+                                <td>@discipline.Id</td>
+                                <td>@discipline.nomDiscipline</td>
+                            </tr>
+                        }
+                    }
+                    </tbody>
+                </table>
+            </div>
+            <div class="text-right">
+                <a href="#">View All Transactions <i class="fa fa-arrow-circle-right"></i></a>
+            </div>
+        </div>
+    </div>
+<div onclick="showAddDisc()" class="btn btn-primary">Ajouter une discipline</div>
+<div id="add-discipline">
+    <form class="form-inline"> 
+        Ajouter : 
+        <div class="form-group">
+            <select class="form-control">
+                @foreach (var discipline in Model)
+            {
+                    <option>@discipline.nomDiscipline</option>
+                }
+            </select>
+        </div>
+        <div class="form-group">
+            <input class="form-control" name="chosenDiscipline" type="checkbox" value="test1" />&nbsp;
+            <label for="chosenDiscipline"> test1</label>
+        </div>
+    </form>
+</div>
+
+<script>
+    function showAddDisc() {
+        var a = document.getElementById("add-discipline");
+        if (a.style.visibility == "visible")
+            a.style.visibility = "hidden";
+        else 
+            a.style.visibility = "visible"
+    }
+</script>

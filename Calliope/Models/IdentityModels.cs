@@ -23,6 +23,8 @@ namespace Calliope.Models
     {
         public DbSet<User> Users { get; set; }
         public DbSet<Groupe> Groupes { get; set; }
+        public DbSet<Discipline> Disciplines { get; set; }
+        public DbSet<Note> Notes { get; set; }
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();

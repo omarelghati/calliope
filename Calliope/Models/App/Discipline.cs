@@ -12,5 +12,6 @@ namespace Calliope.Models.App
         [StringLength(255)]
         public string nomDiscipline { get; set; }
         public virtual EvaluationCollective EvaluationCollective { get; set; }
+        public virtual ICollection<Enseignant>  Enseignants { get; set; }
     }
 }

@@ -18,7 +18,7 @@ namespace Calliope.Models.App
 
         //
         public virtual Groupe Groupe { get; set; }
-        public virtual Competance Competance { get; set; }
-        public virtual  Discipline Discipline { get; set; }
+        public virtual ICollection<Competance> Competances { get; set; }
+        public virtual ICollection<Discipline> Discipline  { get; set; }
     }
 }

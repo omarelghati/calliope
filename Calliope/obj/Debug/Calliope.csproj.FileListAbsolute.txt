@@ -74,3 +74,9 @@ c:\users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\
 c:\users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.csprojResolveAssemblyReference.cache
 C:\Users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.Migrations.basicTables.resources
 C:\Users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.csproj.GenerateResource.Cache
+C:\Users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.Migrations.updateuserTable.resources
+C:\Users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.Migrations.rectificationlength.resources
+C:\Users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.Migrations.enseignantdiscipline.resources
+C:\Users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.Migrations.disciplineenseignant.resources
+C:\Users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.Migrations.createNotes.resources
+C:\Users\omar\documents\visual studio 2017\Projects\Calliope\Calliope\obj\Debug\Calliope.Migrations.rectifyGroupEnsRElation.resources

@@ -13,13 +13,13 @@
                 <center>
                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
                 <div class="form-group">
-                    <input type="email" class="form-control" name="Username" placeholder="E-mail.." required autofocus />
+                    <input type="email" class="form-control" name="email" placeholder="E-mail.." required autofocus />
                 </div>
                 </center>
                 <center>
                     <div class="form-group">
 
-                        <input type="password" class="form-control" name="Password" placeholder="Mot de passe.." required="" />
+                        <input type="password" class="form-control" name="password" placeholder="Mot de passe.." required="" />
 
                     </div>
                 </center>
@@ -27,9 +27,10 @@
                         <label style="color:white;" for="signupAs">S'authentifier en tant que :</label>
                         <center>
                             <select name="type" class="form-control">
-                                <option>Administrateur</option>
-                                <option>Parent</option>
-                                <option></option>
+                                <option value="Administration">Personel d'administration</option>
+                                <option value="Parent">Parent</option>
+                                <option value="Administrateur">Administrateur</option>
+                                <option value="Enseignant">Enseignant</option>
                             </select>
                         </center>
                     </div>

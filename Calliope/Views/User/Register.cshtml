@@ -10,7 +10,7 @@
         @Html.AntiForgeryToken()
         <center>
             <h3 style="color:white">Fiche d'inscription</h3>
-            <hr class="colorgraph"><br>
+            <hr class="colorgraph"><br />
                 @if(!Html.ViewData.ModelState.IsValid){
                 <div class="panel panel-danger">
                     <div class="panel-body">
@@ -46,6 +46,7 @@
                 <select name="type" class="form-control">
                     <option value="Parent">Parent</option>
                     <option value="Administrateur">Administrateur</option>
+                    <option value="Enseignant">Enseignant</option>
                 </select>
             </div>
             <div class="form-group">

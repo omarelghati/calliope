@@ -12,7 +12,6 @@ namespace Calliope.Models.App
         [Required]
         [StringLength(255)]
         public string nomCompetance { get; set; }
-        public Discipline Discipline { get; set; }
         public virtual EvaluationCollective EvaluationCollective { get; set; }
     }
 }

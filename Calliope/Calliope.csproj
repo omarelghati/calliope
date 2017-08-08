@@ -193,6 +193,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\EnseignantController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\UserController.cs" />
@@ -202,6 +203,30 @@
     <Compile Include="Migrations\201708061428227_basicTables.cs" />
     <Compile Include="Migrations\201708061428227_basicTables.Designer.cs">
       <DependentUpon>201708061428227_basicTables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708071000506_updateuserTable.cs" />
+    <Compile Include="Migrations\201708071000506_updateuserTable.Designer.cs">
+      <DependentUpon>201708071000506_updateuserTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708071040030_rectificationlength.cs" />
+    <Compile Include="Migrations\201708071040030_rectificationlength.Designer.cs">
+      <DependentUpon>201708071040030_rectificationlength.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708071105216_enseignant-discipline.cs" />
+    <Compile Include="Migrations\201708071105216_enseignant-discipline.Designer.cs">
+      <DependentUpon>201708071105216_enseignant-discipline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708071142095_discipline-enseignant.cs" />
+    <Compile Include="Migrations\201708071142095_discipline-enseignant.Designer.cs">
+      <DependentUpon>201708071142095_discipline-enseignant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708080854275_createNotes.cs" />
+    <Compile Include="Migrations\201708080854275_createNotes.Designer.cs">
+      <DependentUpon>201708080854275_createNotes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201708080954079_rectifyGroupEnsRElation.cs" />
+    <Compile Include="Migrations\201708080954079_rectifyGroupEnsRElation.Designer.cs">
+      <DependentUpon>201708080954079_rectifyGroupEnsRElation.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -229,6 +254,8 @@
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap-rtl.css" />
+    <Content Include="Content\bootstrap-rtl.min.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -243,6 +270,8 @@
     <Content Include="Content\calliope.png" />
     <Content Include="Content\calliope1.png" />
     <Content Include="Content\css\form-elements.css" />
+    <Content Include="Content\css\sb-admin-rtl.css" />
+    <Content Include="Content\css\sb-admin.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\font-awesome\css\font-awesome.css" />
     <Content Include="Content\font-awesome\css\font-awesome.min.css" />
@@ -253,13 +282,34 @@
     <Content Include="Content\ico\favicon.png" />
     <Content Include="Content\img\backgrounds\1%402x.jpg" />
     <Content Include="Content\img\backgrounds\1.jpg" />
+    <Content Include="Content\js\bootstrap.js" />
+    <Content Include="Content\js\bootstrap.min.js" />
     <Content Include="Content\js\jquery-1.11.1.js" />
     <Content Include="Content\js\jquery-1.11.1.min.js" />
+    <Content Include="Content\js\jquery-3.2.1.min.js" />
     <Content Include="Content\js\jquery.backstretch.js" />
     <Content Include="Content\js\jquery.backstretch.min.js" />
+    <Content Include="Content\js\jquery.js" />
     <Content Include="Content\js\placeholder.js" />
+    <Content Include="Content\js\plugins\flot\excanvas.min.js" />
+    <Content Include="Content\js\plugins\flot\flot-data.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.pie.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.resize.js" />
+    <Content Include="Content\js\plugins\flot\jquery.flot.tooltip.min.js" />
+    <Content Include="Content\js\plugins\morris\morris-data.js" />
+    <Content Include="Content\js\plugins\morris\morris.js" />
+    <Content Include="Content\js\plugins\morris\morris.min.js" />
+    <Content Include="Content\js\plugins\morris\raphael.min.js" />
     <Content Include="Content\js\scripts.js" />
     <Content Include="Content\LoginStyle.css" />
+    <Content Include="Content\morris\morris-data.js" />
+    <Content Include="Content\morris\morris.js" />
+    <Content Include="Content\morris\morris.min.js" />
+    <Content Include="Content\morris\raphael.min.js" />
+    <Content Include="Content\plugins\morris.css" />
+    <Content Include="Content\sb-admin-rtl.css" />
+    <Content Include="Content\sb-admin.css" />
     <Content Include="Content\school1.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
@@ -368,6 +418,10 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\User\Login.cshtml" />
     <Content Include="Views\User\Register.cshtml" />
+    <Content Include="Views\Enseignant\_Layout.cshtml" />
+    <Content Include="Views\Enseignant\Index.cshtml" />
+    <Content Include="Views\Enseignant\Mes_Disciplines.cshtml" />
+    <Content Include="Views\Enseignant\Evaluations_individuelles.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -384,6 +438,24 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201708061428227_basicTables.resx">
       <DependentUpon>201708061428227_basicTables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708071000506_updateuserTable.resx">
+      <DependentUpon>201708071000506_updateuserTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708071040030_rectificationlength.resx">
+      <DependentUpon>201708071040030_rectificationlength.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708071105216_enseignant-discipline.resx">
+      <DependentUpon>201708071105216_enseignant-discipline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708071142095_discipline-enseignant.resx">
+      <DependentUpon>201708071142095_discipline-enseignant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708080854275_createNotes.resx">
+      <DependentUpon>201708080854275_createNotes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201708080954079_rectifyGroupEnsRElation.resx">
+      <DependentUpon>201708080954079_rectifyGroupEnsRElation.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

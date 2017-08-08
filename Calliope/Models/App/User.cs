@@ -37,7 +37,7 @@ namespace Calliope.Models
         [DataType(DataType.Password)]
         public string confirmPassword { get; set; }
         [Required]
-        [StringLength(10)]
+        [StringLength(20)]
         public string type { get; set; }
         public User()
         {

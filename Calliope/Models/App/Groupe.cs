@@ -13,5 +13,6 @@ namespace Calliope.Models.App
         [StringLength(255)]
         public string nomGroupe { get; set; }
         public virtual Niveau Niveau { get; set; }
+        public virtual ICollection<Enseignant> Enseignants { get; set; }
     }
 }

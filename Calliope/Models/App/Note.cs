@@ -12,5 +12,6 @@ namespace Calliope.Models.App
         [Required]
         public int note { get; set; }
         public virtual EvalutiationIndiv EvaluationIndiv { get; set; }
+        public virtual SavoirFaire SavoirFaire { get; set; }
     }
 }
